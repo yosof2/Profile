@@ -1,0 +1,389 @@
+
+@import 'animate.css';
+:root{
+    --colorBackground : #000000 ;
+    --text : #ffffff ;
+    --mainColor : #ffb400;
+}
+body{
+    background-color: var(--colorBackground);
+    position: relative;
+    font-family: 'Cairo', sans-serif;
+}
+/* ++List of options */
+
+.listOfOptions{
+    background-color: #2b2a2a;
+    height: 10%;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+}
+.listOfOptions div {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    background-color: #444444;
+    border-radius: 50%;
+} 
+
+.listOfOptions div:hover {
+    background-color: var(--mainColor);
+}
+.listOfOptions div i{
+    color: var(--text);
+}
+@media (min-width: 992px) {
+    .listOfOptions{
+        background-color: transparent;
+        height: 50%;
+        width: 50px;
+        position: fixed;
+        flex-direction: column;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+/* --List of options */
+
+/* Home */
+.pageHome{
+    height: 100vh;
+}
+.pageHome .photograph {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto;
+    border-radius: 50%;
+    background-color: #ffb400;
+
+
+}
+ .pageHome .photograph img{
+    width: 95%;
+    border-radius: 50%;
+} 
+.pageHome .text h1{
+    color: var(--mainColor);
+    text-align: center;
+}
+.pageHome .text h2 , .pageHome .text p{
+    color: var(--text);
+    text-align: center;
+    max-width: 400px;
+}
+.moreAboutMe{
+    width: 170px !important;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--mainColor);
+    color: var(--text);
+    border-radius: 25px;
+}
+.moreAboutMe:hover  .fill {
+    display: block;
+    right: 0;
+    border-radius: 25px;
+    width: 100%
+}
+.moreAboutMe .fill{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    right: 0;
+    background-color: var(--mainColor);
+    border-radius: 25px;
+    z-index: -1;
+    background-color: #ffb300fb;
+    transition: all .3s ease-in-out;
+}
+.framework{
+    background-color: var(--mainColor);
+    z-index: -1;
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;      
+}
+.pageHome .containers .imge{
+    width: 35%;
+    height: calc(100vh - 80px);
+    margin: auto;
+    background: url(../image/About/Photograph.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    z-index: -1;
+    border-radius: 30px;
+    box-shadow: 0 0 7px rgba(0,0,0,.9);
+}
+
+.moreAboutMe i {
+    background-color: var(--mainColor);
+    border-radius: 50%;
+    height: 45.33px;
+    width: 45.33px;
+}
+@media (min-width: 992px) {
+   .pageHome .containers{
+    display: flex;
+    flex-direction: row !important;
+    margin-right:100px ;
+   }
+   .pageHome .photograph {
+    width: 100%;
+    height: 95vh;
+    margin: 0px auto;
+    border-radius: 0%;
+    background-color: #ffb300;
+}
+ .pageHome .photograph img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+}
+ .pageHome .text p{
+    color: var(--text);
+    text-align: initial;
+    max-width: 400px;
+}
+.pageHome .text {
+    position: fixed;
+    left: 50%;
+}
+}
+
+/* Home*/
+
+
+/* About */
+.pageAbout h1 {
+    padding-top: 40px;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pageAbout span {
+    color: var(--mainColor);
+}
+
+.pageAbout .personalinfos h2  {
+    padding: 20px 10px;
+    color: var(--text);
+    direction: rtl;
+}
+
+.pageAbout .personalinfos pre {
+    padding: 0px 10px;
+    margin: 0;
+    color: var(--text);
+    font-family: 'Cairo', sans-serif;
+    direction: rtl;
+    line-height: 35px;
+
+}
+
+.pageAbout .boxes .box {
+    height: 150px;
+    border: 1px solid #252525 ;
+   border-radius: 20px;
+
+}
+
+.pageAbout .boxes .box p{
+    color: var(--text);
+    direction: rtl;
+}
+
+.pageAbout .boxes .box span{
+   direction: rtl;
+    font-size: 40px;
+}
+
+ .scroul{
+    height: 200px;
+ }
+
+@media (min-width: 992px) {
+    .pageAbout .personalinfos {
+        width: 40%;
+    }
+
+    .pageAbout .boxes {
+        width: 70%;
+    }
+
+    .pageAbout  .circl2{
+        width: 50%;
+    }
+}
+
+.pageAbout .circl {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pageAbout .circl .fill {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 7px solid var(--mainColor);
+    clip: rect(0,90px,120px,0);
+    transform: rotateX("30px");
+}
+.pageAbout .circl span {
+    content: "";
+    position: absolute;
+    color: var(--text);
+    font-size: 30px;
+}
+
+.pageAbout .circl p {
+    content: "";
+    position: absolute;
+    color: var(--text);
+    font-size: 30px;
+    bottom: 0;
+    transform: translateY(170%);
+}
+.pageAbout  .circl2{
+    margin-bottom: 120px !important;
+}
+
+.pageAbout .experience .cricl3 {
+    width: 40px !important;
+    height: 40px !important;
+    background-color: var(--mainColor);
+    border-radius: 50%;
+}
+
+.pageAbout .experience .cricl3 i {
+   color: var(--text);
+}
+.pageAbout .experience .cricl3 .text h6 , p {
+    color: var(--text) !important;
+
+ }
+
+ .pageAbout .experience .cricl3  {
+    position: relative;
+    width:40px !important;
+ }
+ .pageAbout .experience .cricl3::after  {
+    content: "";
+    position: absolute;
+    width:2px !important;
+    height: 150px;
+    background-color: #7a7a7a;
+    top: 0;
+    z-index: -1;
+    margin-top: 20px;
+
+ }
+
+ .pageAbout .experience .text  {
+    width: 70% !important;
+ }
+
+ .pageAbout .experience .text .pp {
+    background: #212121;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 9px;
+ }
+/* About */
+
+/* Portfolio  */
+
+
+/* Portfolio  */
+
+/* Contcat  */
+.pageContcat h1 {
+    padding-top: 40px;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pageContcat span {
+    color: var(--mainColor);
+}
+
+.pageContcat p {
+    color: var(--text);
+    direction: rtl;
+    padding: 0px 5px;
+}
+
+.pageContcat .sec1::first-line {
+    color: var(--mainColor) !important;
+    direction: rtl;
+    padding: 0px 5px;
+    font-size: 35px;
+}
+.pageContcat .sec1 i{
+    color: var(--mainColor) !important;
+    direction: rtl;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    padding: 0px 5px;
+    font-size: 35px;
+}
+.pageContcat .sec2 input {
+   height: 70px;
+    background-color: #333;
+    color: var(--text);
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    direction: rtl;
+}
+.pageContcat .sec2 input:last-child {
+    height: 70px;
+    width: 150px;
+     background-color: var(--mainColor);
+     color: var(--text);
+     border: none;
+     outline: none;
+     border-radius: 25px;
+     margin-bottom: 10px;
+     direction: rtl;
+ }
+.pageContcat .sec2  textarea {
+     height: 200px;
+     background-color: #333;
+     color: var(--text);
+     border: none;
+     outline: none;
+     border-radius: 25px;
+     margin-bottom: 10px;
+     direction: rtl;
+ }
+
+ .pageContcat .moreAboutMe{
+    margin-top: 30px !important;
+    width: 200px !important;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--mainColor);
+    color: var(--text);
+    border-radius: 25px;
+}
+/* Contcat  */
