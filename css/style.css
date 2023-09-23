@@ -387,3 +387,22 @@ body{
     border-radius: 25px;
 }
 /* Contcat  */
+/* pagePortfolio  */
+.pagePortfolio h1 {
+    padding-top: 40px;
+    color: var(--text);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pagePortfolio span {
+    color: var(--mainColor);
+}
+
+
+
+/* pagePortfolio   */
+
+video{
+    margin: 12.5% !important;
+}
